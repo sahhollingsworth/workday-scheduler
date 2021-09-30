@@ -18,7 +18,7 @@ THEN the current day is displayed at the top of the calendar and timeblocks for 
 * Saved events persist, regardless of page refresh.
 
 ## Built with
-* []()
+* [JQuery](https://jquery.com/)
 * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Used to create elements on the DOM
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style html elements on the page
