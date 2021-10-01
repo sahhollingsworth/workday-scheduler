@@ -1,4 +1,4 @@
-// Calculate date on page load and display in header
+// Time variables for header Date display
 var currentDate = $("#currentDay");
 var currentTime;
 
@@ -10,12 +10,12 @@ var timeCurrent = setInterval(timeUpdate, 1000);
 
 // Update date in header, called at each time check interval
 function timeUpdate(){
-    var currentTime = moment();
+    currentTime = moment();
     currentDate.text(currentTime.format("dddd, MMMM Do"));
     timeCoordBlocks();
 }
 
-// Function to evaluate current time and update coloring of time blocks based on their relation to it (past present future), called at each time check interval
+// Evaluate current time and update coloring of time blocks based on their relation to it (past present future). called at each time check interval
 function timeCoordBlocks(){
     /* Set a variable for hour at time of function run */
     var currentHour = moment().hour();
@@ -38,13 +38,17 @@ function timeCoordBlocks(){
 // Listener for save button in each timeblock
 $(".saveBtn").on("click", saveBlock);
 
-// Function to saved timeblock input to local storage. 
+// Save timeblock description input to local storage. Each timeblock (time+description) operates as an object in local storage 
 function saveBlock(event){
+    /* As the parent element of the element interacted with, time is saved by id (just in military time) */
     var blockTime = $(event.target).parent().attr("id");
+    // Set variable on the the value of sibling elements to element .description */
     var blockDescription = $(event.target).siblings(".description").val();
+    /* Handle case where empty description is saved */
     if (blockDescription === ""){
         alert("Please type your event details before saving.")
     }
+    // Save as object with time (id) as key and description as value
     else {
         localStorage.setItem(blockTime,blockDescription);
     }
