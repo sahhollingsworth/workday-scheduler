@@ -40,15 +40,17 @@ $(".saveBtn").on("click", saveBlock);
 
 // Function to saved timeblock input to local storage. 
 function saveBlock(event){
-    var blockDescription = $(event.target).siblings(".description").val();
     var blockTime = $(event.target).parent().attr("id");
-    console.log(blockDescription);
-    console.log(blockTime);
+    var blockDescription = $(event.target).siblings(".description").val();
+    if (blockDescription === ""){
+        alert("Please type your event details before saving.")
+    }
+    else {
+        localStorage.setItem(blockTime,blockDescription);
+    }
 }
 
-// Function to pull block data from local storage
-
-// Function to display block data from local storage
+// Function to pull & display block description data from local storage
 
 
 
