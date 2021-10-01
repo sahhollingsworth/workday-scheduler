@@ -1,11 +1,9 @@
 # Work Day Scheduler Refactor
 
-The is a simple calendar web application that allows users to save events for each hour of the day. 
-
-It features dynamically updated HTML and CSS powered by jQuery.
+The is a simple calendar web application that allows users to save events for each hour of the work day. It features dynamically updating HTML and CSS, powered by Javascript and JQuery.
 
 ## Deployed site
-[Click here to visit deployed Motown Quiz application.](https://sahhollingsworth.github.io/workday-scheduler/ "link to Work Day Scheduler web application")
+[Click here to visit deployed Work Day Scheduler application.](https://sahhollingsworth.github.io/workday-scheduler/ "link to Work Day Scheduler web application")
 
 ![Image](TBD IMAGE "screenshot of Work Day Scheduler web application")
 
