@@ -2,8 +2,24 @@
 var currentDate = $("#currentDay");
 var currentTime;
 
-// Optimization - Loads current date in header much quicker on page load
+// Optimization - Loads date in header much quicker on page load
 timeUpdate();
+
+// Load all timeblock data in local storage upon page load
+loadBlockData(); 
+
+// Function to pull & display block description data from local storage
+function loadBlockData(){
+    $('#9 .description').val(localStorage.getItem('9'));
+    $('#10 .description').val(localStorage.getItem('10'));
+    $('#11 .description').val(localStorage.getItem('11'));
+    $('#12 .description').val(localStorage.getItem('12'));
+    $('#13 .description').val(localStorage.getItem('13'));
+    $('#14 .description').val(localStorage.getItem('14'));
+    $('#15 .description').val(localStorage.getItem('15'));
+    $('#16 .description').val(localStorage.getItem('16'));
+    $('#17 .description').val(localStorage.getItem('17'));
+}
 
 // Function to check time at 1 second intervals
 var timeCurrent = setInterval(timeUpdate, 1000);
@@ -44,17 +60,6 @@ function saveBlock(event){
     var blockTime = $(event.target).parent().attr("id");
     // Set variable on the the value of sibling elements to element .description */
     var blockDescription = $(event.target).siblings(".description").val();
-    /* Handle case where empty description is saved */
-    if (blockDescription === ""){
-        alert("Please type your event details before saving.")
-    }
     // Save as object with time (id) as key and description as value
-    else {
-        localStorage.setItem(blockTime,blockDescription);
-    }
+    localStorage.setItem(blockTime,blockDescription);
 }
-
-// Function to pull & display block description data from local storage
-
-
-
