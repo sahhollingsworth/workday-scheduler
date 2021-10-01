@@ -17,7 +17,7 @@ The is a simple calendar web application that allows users to save events for ea
 ## Built with
 * [JQuery](https://jquery.com/)
 * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-* [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript) - 
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript) 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Git](https://git-scm.com/doc)
