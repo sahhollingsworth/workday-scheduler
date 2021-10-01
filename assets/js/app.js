@@ -17,6 +17,7 @@ function timeUpdate(){
 
 // Function to evaluate current time and update coloring of time blocks based on their relation to it (past present future), called at each time check interval
 function timeCoordBlocks(){
+    /* Set a variable for hour at time of function run */
     var currentHour = moment().hour();
     // iterate over each timeblock, parsing id which equals the hour block represents 
     $(".hour-block").each(function() {
@@ -35,14 +36,15 @@ function timeCoordBlocks(){
 };
 
 // Listener for save button in each timeblock
-$(".saveBtn").onclick("click", saveBlock);
+$(".saveBtn").on("click", saveBlock);
 
-// Function to saved timeblock input to local storage
-// function saveBlock() {
-//}
-// function saveBlocks() {
-//     localStorage.setItem("blocks", JSON.stringify(blocks));
-// }
+// Function to saved timeblock input to local storage. 
+function saveBlock(event){
+    var blockDescription = $(event.target).siblings(".description").val();
+    var blockTime = $(event.target).parent().attr("id");
+    console.log(blockDescription);
+    console.log(blockTime);
+}
 
 // Function to pull block data from local storage
 
