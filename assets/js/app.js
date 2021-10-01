@@ -3,7 +3,7 @@ var dateCurrent = moment();
 $("#currentDay").text(dateCurrent.format("dddd, MMMM Do"));
 
 // Listener for save button in each timeblock
-$(.save).onclick("click", saveBlock);
+$(".saveBtn").onclick("click", saveBlock);
 
 // Function to saved timeblock input to local storage
 // function saveBlock() {
