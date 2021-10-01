@@ -25,7 +25,7 @@ textarea{
   white-space: pre-wrap;
 }
 
-.time-block{
+.hour-block{
   text-align: center;
   border-radius: 15px;
 }
@@ -33,7 +33,7 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -58,14 +58,23 @@ textarea{
 }
 
 .saveBtn {
+  border-color:#06aed5;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #06aed5;
   color: white;
+
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+/* Don't show an outline when the button is clicked*/
+.saveBtn:focus {
+  outline:none;
+}
+
+
